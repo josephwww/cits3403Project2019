@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,8 +9,10 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 	<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
-	<link href="style.css" rel="stylesheet">
-    
+	<link href="style2.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+
         
 </head>
     
@@ -18,12 +20,14 @@
 <!--navigation-->
 <nav class="navbar navbar-expand-md navbar-light bg-light stick-top">
 <div class="container-fluid">
-    <a class="navbar-brand" href="#"><img src="/images/logo.png" alt="logo" width="40%" height="80%"></a>
+    <a class="navbar-brand" href="#"><img src="logo.png" width="50%" height="50%"  alt="asd"></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
     <span class="navbar-toggler-icon"></span>
         </button>
+
     <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav ml-auto">
+        <ul class="navbar-nav ml-auto ">
+
             <li class="nav-item" href='#'>
                 <a class="nav-link" href="#">Home</a></li>
             
@@ -37,67 +41,59 @@
     </div>
 </div>
 </nav>
-    
-<!--- Welcome section-->
-<div class="container-fluid padding">
-    <div class="row welcome text-center">
-        <div class="col-12">
-        <h1 class="display-4">Welcome</h1></div>
-    </div>
-    <hr>
-    <div class="col-12">
-    <p class='lead'>Welcome to my website for polling</p></div>
-    </div>
-    <!--- Jumbotron --->
-<div class="container-fluid">
-<div class="row jumbotron">
-    <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 col-xl-10">
-        <p class="lead">This website allows polling for best units</p>
-    <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 col-xl-2">
-        <a href="#"><button type="button" class="btn btn-outline-secondary btn-lg">Know More</button></a></div>
-    </div>
-    </div>
-    </div>
-<!--image Slider -->
-<div id="slides" class="carousel slide" data-ride="carousel">
-<ul class="carousel-indicators">
-    <li data-target="#slides" data-slide-to='0' class="active"></li>
-    <li data-target="#slides" data-slide-to='1' class="active"></li>
-    <li data-target="#slides" data-slide-to='2' class="active"></li>
 
-    </ul>
-<div class="carousel-inner">
-    <div class="carousel-item active">
-    <img src="/images/Sun.jpg" class="img-responsive"  width="100%" />
-    <div class="carousel-caption">
-        <h1 class="display-2">Polling</h1>
-    <button type="button" class="btn btn-outline-light btn-lg">Vote</button>
-    <button type="button" class="btn btn-primary btn-lg">Vote</button>
-
+<div class="modal-dialog text-center">
+    <div class="col-sm-8 main-section">
+    <div class="modal-contet">
+        <div class="col-12 user-img">
+        <img src="User.png" width="50%" height="50%" >
+        </div>
+        <form class="col-12">
+        <div class="form-group">
+            <input type="text" class="form-control" placeholder="Enter Username">
+            <input type="text" class="form-control" placeholder="Enter Password">
+            </div>
+            <button type="submit" class="btn"><i class="fas fa-sign-in-alt"></i>Login</button>
+        </form>
+        <div class="col-12 forgot">
+        <a href="#">Forgot Password?</a></div>
         </div>
     </div>
     </div>
-    </div>
+    
+<div class="row text-center padding">
+<div class="col-12">
+        <h2> Connect</h2>
+        </div>  
+    <div class="col-12 social padding">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-google-plus-g"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+
+
+        
+
+    </div></div>
+    
 <footer>
 <div class="container-fluid padding">
 <div class="row text-center">
     <div class="col-md-12">
     <hr class="light">
-    <p>555-555-5555</p>
-    <p>hugozhang0521@gmail.com</p>
-    <p>Street Name</p>
-    <p>Perth, WA, 6010</p>
+    <p>Hugozhang0521@gmail.com</p>
+    <p>35 Stirling Hwy, Crawley WA 6009</p>
     
     </div>
     <div class="col-12">
     <hr class="light">
-    <h5>&copy; xxxx.com</h5></div>
+    <h5>&copy; unitsrank.xyz</h5></div>
     </div>
     </div>
     </footer>
-
-
-
     
-</body>
+    </body>
+    
 </html>
+    
