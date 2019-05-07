@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+{% block content %}
+ {% for poll in polls %}
+        <article class="media content-section">
+          
+          <div class="media-body">
+            <div class="article-metadata">
+              <a class="mr-2" href="#">{{ poll.parti.username }}</a>
+              <small class="text-muted">{{ poll.date_polled.strftime('%Y-%m-%d') }}</small>
+            </div>
+            <h2><a class="article-title" href="{{ url_for('poll', poll_id=poll.id) }}">{{ poll.code }}</a></h2>
+            
+          </div>
+        </article>
+    {% endfor %}
+{% endblock content %}
