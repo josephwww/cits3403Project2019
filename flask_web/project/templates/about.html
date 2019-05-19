@@ -1,4 +1,51 @@
 {% extends "layout.html" %}
 {% block content %}
-<h1>This is the about page!</h1>
-{% endblock content %}
+<div class='container-fluid'>
+<h2>About</h2>
+<h3>Scroll down to view the result</h3>
+<p>This website provides a way for students to find the best unit in UWA.
+	<br>
+	<br>
+
+1. Registration:
+	Generally, in order to ensure the reliability of the data, every participant need to register their own account. Once registered, user can change their account details including email and username in the account page.
+<br><br>
+
+2. Log in:
+	User logs in to the website with their own credential, otherwise they will be introduced to registration page. 
+	<br><br>
+
+
+3. Vote:
+	This section requires users being logged in. Users simply input the unit code in UWA and their preference for the unit. The unit code occupies eight characters and the website would check the validity of the unit code. You can only vote for the same unit once or change your preference for the unit by inputting the same unit code and new preference.
+	<br><br>
+
+
+4. Result:
+	The result is according to the preferences contributed by the participants. It simply get the average of each unit and rank it in descending order.
+	Everyone has access to the result page. This page provides the view of all units have been voted by preference in descending order with how many participants. Additionally, The bar graph under each unit shows the data in an easy way.
+
+</p>
+</div>
+
+    <div class="container-fluid" id="box" #hint2>   
+    	
+
+
+    </div>
+
+     <br>
+    <br>
+        <div class="container ">   
+    <button type="button" id="button3" class="btn btn-info offset-5" >Results</button>
+
+    <button type="button" id="button4" class="btn btn-danger" >Hide Results</button>
+</div>
+
+  
+   <br>
+   <br>
+   <br>  
+   <br>
+
+{% endblock content %} 
