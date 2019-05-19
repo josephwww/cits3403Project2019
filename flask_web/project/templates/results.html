@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class='container-fluid bg-light'>
+  <p>The results shown below are the top 10 best units with their average marks. Click the unit code to get more info about the unit!</p>
+  </div>
+ {% for poll in polls %}
+        
+          <div class="container" id='hint'>
+
+          <div class="media-body">
+            <div class="article-metadata ">
+              <a class="mr-2" href="http://handbooks.uwa.edu.au/unitdetails?code={{ poll.code }}">{{ poll.code }}</a>
+              
+            </div>
+            <h5 class="text-center"><a class="article-title ">Average marks:{{ poll.a }}</a></h5>
+            
+          </div>
+          <div class="progress" >
+          <div class="progress-bar progress-bar-striped  progress-bar-animated" role="progressbar" aria-valuenow="{{ poll.a }}" aria-valuemin="0" aria-valuemax="10" style="width:{{ '{:.0%}'.format(poll.a*0.1) }}"> {{'{:.0%}'.format(poll.a*0.1) }}
+          </div>
+          </div>
+        </div>
+<br>
+<br>
+    {% endfor %}
+<br>
+<br>
+{% endblock content %}
