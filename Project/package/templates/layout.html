@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	{% if title %}
+		<title>{{ title }}</title>
+	{% else %}
+		<title>UnitPoll</title>
+	{% endif %}
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	
+	<link rel="stylesheet" href="{{ url_for('static',filename='style.css') }}" >
+
+
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
+<div class="container-fluid">
+	<a class="navbar-brand" href="{{ url_for('home') }}"><img src="static/img/logo.png" alt="logo" width="70" height="70"></a>
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+		<span class="navbar-toggler-icon"></span>
+	</button>
+	<div class="collapse navbar-collapse" id="navbarResponsive">
+		<ul class="navbar-nav ml-auto justify-content-end">
+			{% if current_user.is_authenticated  %}
+			<li class="nav-item active">
+				<a class="nav-link" href="home">Home</a>
+			</li>
+
+			<li class="nav-item ">
+				<a class="nav-link" href="about">About</a>
+			</li>
+
+			<li class="nav-item ">
+				<a class="nav-link" href="vote">Vote</a>
+			</li>
+			<li class="nav-item ">
+				<a class="nav-link" href="results">Results</a>
+			</li>
+
+			<li class="nav-item ">
+				<a class="nav-link" href="account">MyAccount</a>
+			</li>
+			<li class="nav-item ">
+				<a class="nav-link" href="logout">Logout</a>
+			</li>
+
+
+
+			{% else %}
+			<li class="nav-item active">
+				<a class="nav-link" href="home">Home</a>
+			</li>
+
+			<li class="nav-item ">
+				<a class="nav-link" href="about">About</a>
+			</li>
+
+			<li class="nav-item ">
+				<a class="nav-link" href="{{url_for('register')}}">Register</a>
+			</li>
+
+			<li class="nav-item ">
+				<a class="nav-link" href="login">Login</a>
+			</li>
+			{% endif %}
+		</ul>
+	</div>
+</div>
+</nav>
+	{% with messages = get_flashed_messages(with_categories=true) %}
+		{% if messages %}
+			{% for category, message in messages %}
+				<div class="alert alert-{{ category }}">
+					{{ message }}
+				</div>
+			{% endfor %}
+		{% endif %}
+	{% endwith %}
+
+	{% block content%}{% endblock %}
+
+
+<!--- Footer -->
+<footer>
+<div class="container-fluid padding" >
+<div class="row text-center">
+
+	<div class="col-12 social" >
+		<a href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a>
+		<a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+		<a href="https://www.youtube.com/"><i class="fab fa-youtube"></i></a>
+	</div>
+	<div class="col-12">
+		<hr class="light">
+		<h5>&copy; unitsrank.xyz</h5>
+		<h6>Developed by Joseph and Hugo</h6>
+	</div>
+</div>
+</div>
+</footer>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+<script>
+
+$(document).ready(function(){
+    $("#button3").click(function(){
+        $("#box").load("http://127.0.0.1:5000/results #hint", function(responseTxt, statusTxt, jqXHR){
+
+            if(statusTxt == "error"){
+                alert("Error: " + jqXHR.status + " " + jqXHR.statusText);
+            }
+        });
+    });
+});
+$(document).ready(function(){
+    $("#button4").click(function(){
+        $("#box").load("http://127.0.0.1:5000/about #hint2", function(responseTxt, statusTxt, jqXHR){
+
+            if(statusTxt == "error"){
+                alert("Error: " + jqXHR.status + " " + jqXHR.statusText);
+            }
+        });
+    });
+});
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+

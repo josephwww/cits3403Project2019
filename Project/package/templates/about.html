@@ -1,0 +1,50 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class='container-fluid'>
+<h2>About</h2>
+<p>This website provides a way for students with four functionalities to find the best unit in UWA.
+	<br>
+	<br>
+
+1. Registration:
+	You will need an account to vote. Please use several seconds to register one! Thanks!
+<br><br>
+
+2. Log in:
+	You can log in to the website with your credential. You can reset your password in the log in page if you forgot yours. You can also change your username and email in MyAccount.
+<br><br>
+
+
+3. Vote:
+	This section requires users being logged in. You can simply input the unit code in UWA and their preference for the unit. 
+	<br><br>
+
+
+4. Result:
+	The result is according to the preferences contributed by all participants. It simply get the average of each unit and rank them in descending order. The results will only display for those units with more than three voters.
+
+
+</p>
+</div>
+
+    <div class="container-fluid" id="box" #hint2>   
+    	
+
+
+    </div>
+
+     <br>
+    <br>
+        <div class="container ">   
+    <button type="button" id="button3" class="btn btn-info offset-5" >Results</button>
+
+    <button type="button" id="button4" class="btn btn-danger" >Hide Results</button>
+</div>
+
+  
+   <br>
+   <br>
+   <br>  
+   <br>
+
+{% endblock content %} 
