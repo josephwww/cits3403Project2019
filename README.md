@@ -1,2 +1,9 @@
 # cits3403Project2019
-#testing
+
+# design and development of the application
+
+# instructions to launch the applictaion
+
+# dependencies (i.e. required modules)
+
+# testing
