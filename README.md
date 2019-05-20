@@ -1,5 +1,6 @@
 # cits3403Project2019
-
+Author:22289267 HONGFENG WANG 22037457 CHANGAN ZHANG
+        
 # design and development of the application
 The application provides five main fuctions to the users, which are Registration, Log in, Vote, Result, Admin.
 At the about page, we provide ajax javascript to view the result without redirecting.
