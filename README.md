@@ -4,7 +4,7 @@
   The application provides five main fuctions to the users, which are Registration, Log in, Vote, Result, Admin.
   Firstly, user needs to register a account and log in. The username and email are unique in the sqlite database.
 # instructions to launch the applictaion
-  
+  python3 run.py
 # dependencies (i.e. required modules)
   -Flask
   -Flask-Admin
