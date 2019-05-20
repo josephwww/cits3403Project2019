@@ -1,7 +1,7 @@
 # cits3403Project2019
 Author:22289267 HONGFENG WANG 22037457 CHANGAN ZHANG
         
-# design and development of the application
+# Design and development of the application
 The application provides five main fuctions to the users, which are Registration, Log in, Vote, Result, Admin.
 At the about page, we provide ajax javascript to view the result without redirecting.
 Firstly, user needs to register a account and log in. The username and email are unique in the sqlite database. In case of forgetting the password, we provide reseeting password through the email.
@@ -23,12 +23,12 @@ In the admin section, with the administration account logged in, we can delete, 
   -Flask-Mail
   -Flask-SQLAlchemy
   -Flask-WTF
-# admin
+# Admin
   Adding a adminisitration account is not directly from the website,
   But through running 'sqlite3 site.db' for safty reason
   SQL Script:
   INSERT INTO user ('username','email','image_file','password','is_admin')
   VALUES('YOUR_USER_NAME','YOUR_EMAIL','default.jpg','YOUR_PASSWORD',TRUE)
-# testing
+# Testing
   unittest:
   python3 test.py
