@@ -48,14 +48,6 @@ html, body{
 }
 
 
-#VoteNowButton1,#VoteNowButton2,#VoteNowButton3,#VoteNowButton4{
-  font-size: 200%;
-  color: black;
-  background-color: #e8ecef;
-  border: 1px solid #e8ecef;
-  transform: translateY(-130%);
-}
-
 #VoteNowButton1:hover,#VoteNowButton2:hover,#VoteNowButton3:hover,#VoteNowButton4:hover{
   color:#ffffff;
 }
@@ -134,8 +126,23 @@ footer{
   }}
 
 
+#VoteNowButton1,#VoteNowButton2,#VoteNowButton3,#VoteNowButton4{
+  font-size: 100%;
+  color: black;
+  background-color: #e8ecef;
+  border: 1px solid #e8ecef;
+  transform: translateY(30%);
+}
 
 
+
+#VoteNowButton1:hover,#VoteNowButton2:hover,#VoteNowButton3:hover,#VoteNowButton4:hover{
+  color:#ffffff;
+}
+
+#VoteNowButton1:active,#VoteNowButton2:active,#VoteNowButton3:active,#VoteNowButton4:active{
+  color: #dddddd
+}
 #VoteNowButton{
   font-size: 80%;
   color: black;
